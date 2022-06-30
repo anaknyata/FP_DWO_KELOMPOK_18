@@ -20,5 +20,21 @@ Langkah-langkah yang dibutuhkan untuk menjalankan app dengan baik :
 6. Buka phpMyAdmin (http://localhost/phpmyadmin).
 7. Buat database dengan nama fp_dwo.
 8. Import file fp_dwo.sql ke dalam database fp_dwo.
-9. Pindahkan file jsp dan xml yang ada pada folder mondrian pindahkan kedalam folder -> C:\xampp\tomcat\webapps\mondrian\WEB-INF\queries.
-10. Jalankan aplikasi dengan mengakses http://localhost/FP_DWO_KELOMPOK_18/.
+9. Pindahkan file jsp dan xml (salesorderfact, salesquotafact) yang ada pada folder mondrian pindahkan kedalam folder  -> C:\xampp\tomcat\webapps\mondrian\WEB-INF\queries.
+10. Pindahkan file testpage.jsp dan index (jsp, html) yang ada pada folder mondrian pindahkan kedalam folder -> C:\xampp\tomcat\webapps\mondrian.
+11. Jalankan aplikasi dengan mengakses http://localhost/FP_DWO_KELOMPOK_18/.
+
+# Screenshot 
+## Dashboard Menu
+
+![Screenshot](screenshot/img1.jpeg)
+
+## SalesOrderFactMenu
+
+![Screenshot](screenshot/img2.jpeg)
+
+## SalesQuotaFactMenu
+
+![Screenshot](screenshot/img3.jpeg)
+
+Made with <span style="color: #e25555;">&hearts;</span> in Surabaya • by Kelompok 18

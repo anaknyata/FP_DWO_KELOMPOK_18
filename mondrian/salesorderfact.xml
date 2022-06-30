@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<Schema name="salesorderfact">
+  <!--
+  == This software is subject to the terms of the Eclipse Public License v1.0
+  == Agreement, available at the following URL:
+  == http://www.eclipse.org/legal/epl-v10.html.
+  == You must accept the terms of that agreement to use this software.
+  ==
+  == Copyright (C) 2000-2005 Julian Hyde
+  == Copyright (C) 2005-2011 Pentaho and others
+  == All Rights Reserved.
+  -->
+
+  <!-- Shared dimensions -->
+
+
+  <!-- Sales -->
+  <Cube name="salesorderfact" defaultMeasure="LineTotal">
+    <!-- Use annotations to provide translations of this cube's caption and
+       description into German and French. Use of annotations in this manner is
+       experimental and unsupported; just for testing right now. -->
+
+    <Table name="salesorderfact" />
+
+
+    <Dimension name="Territory" foreignKey="TerritoryID">
+      <Hierarchy hasAll="true" allMemberName="AllTerritories" primaryKey="TerritoryID">
+        <Table name="salesterritory" />
+        <Level name="TerritoryID" column="Name" />
+      </Hierarchy>
+
+    </Dimension>
+
+
+    <Dimension name="Time" foreignKey="TimeID">
+      <Hierarchy hasAll="true" allMemberName="AllTimes" primaryKey="TimeID">
+        <Table name="timedimension" />
+        <Level name="Year" column="Year" type="Numeric" uniqueMembers="false" levelType="TimeYears" />
+        <Level name="Quarter" column="QuarterName" nameColumn="QuarterName" type="String" uniqueMembers="true" levelType="TimeQuarters" hideMemberIf="Never"></Level>
+        <Level name="Month" column="MonthName" nameColumn="MonthName" type="String" uniqueMembers="true" levelType="TimeMonths" hideMemberIf="Never"></Level>
+        <Level name="Date" column="DateName" nameColumn="DateName" type="String" uniqueMembers="true" levelType="TimeDays" hideMemberIf="Never"></Level>
+      </Hierarchy>
+
+    </Dimension>
+
+    <Dimension name="Product" foreignKey="ProductID">
+      <Hierarchy hasAll="true" allMemberName="AllProducts" primaryKey="ProductID">
+        <Table name="product" />
+        <Level name="Name" column="Name" />
+      </Hierarchy>
+    </Dimension>
+
+
+    <Measure name="OrderQty" column="OrderQty" aggregator="sum" formatString="Standard" />
+    <Measure name="LineTotal" column="LineTotal" aggregator="sum" formatString="Standard" />
+
+    <Measure name="Sales Count" column="ProductID" aggregator="count" formatString="#,###" />
+
+
+  </Cube>
+
+
+</Schema>

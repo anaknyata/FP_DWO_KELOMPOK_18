@@ -37,4 +37,4 @@ Langkah-langkah yang dibutuhkan untuk menjalankan app dengan baik :
 
 ![Screenshot](screenshot/img3.jpeg)
 
-Made with <span style="color: #e25555;">&hearts;</span> in Surabaya • by Kelompok 18
+Made with <span style="color: #e25555;">&hearts;</span> in Surabaya • Powered by Kelompok 18

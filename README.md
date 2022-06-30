@@ -9,3 +9,16 @@ Perkenalkan kami dari kelompok 18 Paralel B yang terdiri dari :
 3. Fajar Wirahadi Kusuma	 	[19082010072]
 4. Yusman Zulfandra F. R		[19082010082]
 5. Inas Syarifah Abidah			[19082010089]
+
+Langkah-langkah yang dibutuhkan untuk menjalankan app dengan baik :
+
+1. Install database server: MySql (disini kami menggunakan XAMPP versi terbaru).
+2. Install software mysql management: phpMyAdmin dari Xampp (ATAU YG LAIN).
+3. Extract FP_DWO_KELOMPOK_18.zip pada folder htdocs XAMPP (xampp/htdocs).
+4. Jalankan Xampp control panel.
+5. Start apache,mysql server, dan tomcat.
+6. Buka phpMyAdmin (http://localhost/phpmyadmin).
+7. Buat database dengan nama fp_dwo.
+8. Import file fp_dwo.sql ke dalam database fp_dwo.
+9. Pindahkan file jsp dan xml yang ada pada folder mondrian pindahkan kedalam folder -> C:\xampp\tomcat\webapps\mondrian\WEB-INF\queries.
+10. Jalankan aplikasi dengan mengakses http://localhost/FP_DWO_KELOMPOK_18/.
